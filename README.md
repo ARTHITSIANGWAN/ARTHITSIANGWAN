@@ -1,16 +1,13 @@
-## Hi there 👋
+# ⚡ ARTHIT SIANGWAN | SOVEREIGN ARCHITECT
+> **Founder & Lead Architect at ThitNueaHub Admin** > *"Mastering the Go Engine ⚡ | 100% Pure Go Logic | Zero-Garbage AI Architecture & Immutable Black-Box Security."*
 
-<!--
-**ARTHITSIANGWAN/ARTHITSIANGWAN** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+---
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 🛡️ Core Identity Manifest
+```yaml
+Operator_Identity: "ARTHIT SIANGWAN"
+GitHub_NoReply_ID: "ARTHITSIANGWAN@users.noreply.github.com"
+Primary_Organization: "ThitNueaHub Admin"
+System_Role: "Sovereign Systems Architect & Chief AI Conductor"
+Location: "Chiang Rai, Thailand 🇹🇭"
+Core_Philosophy: "Building high-performance, Zero-Garbage AI engines to empower Thai SMEs."
