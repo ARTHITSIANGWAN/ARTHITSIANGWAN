@@ -19,3 +19,6 @@ test:
 	@echo "🧪 Running tests..."
 	go test -v ./...
 
+check:
+	@echo "Running automated system health check..."
+	go run ./cmd/system_report/health_check.go
