@@ -1,4 +1,3 @@
-```mermaid
 graph TD
     %% Define Node Styles
     classDef tnh_core fill:#cce5ff,stroke:#004085,stroke-width:2px,rx:10,ry:10,color:black,font-weight:bold;
@@ -10,10 +9,10 @@ graph TD
     Root[TNH System Flow v8.3]:::tnh_core --> Directive;
 
     %% Directive Processing Branch
-    subgraph คำสั่งประมวลผล
-    Directive(TNH\_Master\_Directive\_PhraiThong\_NamIng\_V83):::tnh_directive;
-    ParsedDirective[สถานะ: สำเร็จ / ผ่านการตีความ]:::tnh_data;
-    StoredDirective[สถานะ: จัดเก็บแล้ว]:::tnh_data;
+    subgraph Directive_Processing ["คำสั่งประมวลผล"]
+    Directive(TNH_Master_Directive_PhraiThong_NamIng_V83):::tnh_directive;
+    ParsedDirective["สถานะ: สำเร็จ / ผ่านการตีความ"]:::tnh_data;
+    StoredDirective["สถานะ: จัดเก็บแล้ว"]:::tnh_data;
 
     Directive --> ParsedDirective;
     ParsedDirective --> StoredDirective;
@@ -21,20 +20,20 @@ graph TD
     end
 
     %% Network Analytics Core Branch
-    subgraph แกนวิเคราะห์เครือข่าย L4
+    subgraph Network_Analytics_Core ["แกนวิเคราะห์เครือข่าย L4"]
     NetworkAnalyticsCore(L4 ไพรทอง - แกนวิเคราะห์เครือข่าย GitHub):::tnh_core;
-    AuditResult[ผลการตรวจสอบ]:::tnh_data;
+    AuditResult["ผลการตรวจสอบ"]:::tnh_data;
 
     NetworkAnalyticsCore --> AuditResult;
 
         %% Audit Result Breakdown
-        subgraph รายละเอียดการตรวจสอบ
-        Account(บัญชี: ผู้ดูแลระบบ ARTHITSIANGWAN):::tnh_core;
-        ActiveRepos(คลังข้อมูลที่เปิดใช้งาน: 23):::tnh_core;
-        NetworkConnections(การเชื่อมต่อเครือข่าย: ติดตาม 27 บัญชี):::tnh_network;
-        CoreTech(เน้นเทคโนโลยีหลัก: Pure Go, Zero-Garbage AI):::tnh_core;
-        AccuracyTarget(เป้าหมายความแม่นยำของระบบ: 98.50%):::tnh_core;
-        LoopingRate(อัตราการทำงานซ้ำ: 0.00% ถูกกำจัด):::tnh_core;
+        subgraph Audit_Breakdown ["รายละเอียดการตรวจสอบ"]
+        Account["บัญชี: ผู้ดูแลระบบ ARTHITSIANGWAN"]:::tnh_core;
+        ActiveRepos["คลังข้อมูลที่เปิดใช้งาน: 23"]:::tnh_core;
+        NetworkConnections["การเชื่อมต่อเครือข่าย: ติดตาม 27 บัญชี"]:::tnh_network;
+        CoreTech["เน้นเทคโนโลยีหลัก: Pure Go, Zero-Garbage AI"]:::tnh_core;
+        AccuracyTarget["เป้าหมายความแม่นยำของระบบ: 98.50%"]:::tnh_core;
+        LoopingRate["อัตราการทำงานซ้ำ: 0.00% ถูกกำจัด"]:::tnh_core;
 
         AuditResult --> Account;
         AuditResult --> ActiveRepos;
@@ -47,8 +46,8 @@ graph TD
     NetworkConnections --> ConnectionsGeographic;
 
         %% Network Geography Breakdown
-        subgraph ขอบเขตภูมิศาสตร์
-        ConnectionsGeographic(ขอบเขตภูมิศาสตร์การเชื่อมต่อ):::tnh_network;
+        subgraph Geo_Scope ["ขอบเขตภูมิศาสตร์"]
+        ConnectionsGeographic["ขอบเขตภูมิศาสตร์การเชื่อมต่อ"]:::tnh_network;
         Europe(ยุโรป);
         MiddleEast(ตะวันออกกลาง);
         Asia(เอเชีย);
@@ -62,14 +61,13 @@ graph TD
     end
 
     %% Storage Archival Branch
-    subgraph การเก็บถาวรข้อมูล
-    ArchivedTo(เก็บถาวรที่):::tnh_data;
-    R2Storage(ระบบเก็บข้อมูล R2):::tnh_data;
-    Verified(ยืนยันแล้ว 100%):::tnh_data;
+    subgraph Storage_Archival ["การเก็บถาวรข้อมูล"]
+    ArchivedTo["เก็บถาวรที่"]:::tnh_data;
+    R2Storage["ระบบเก็บข้อมูล R2"]:::tnh_data;
+    Verified["ยืนยันแล้ว 100%"]:::tnh_data;
 
     AuditResult --> ArchivedTo;
     ArchivedTo --> R2Storage;
     R2Storage --> Verified;
     end
-```
-
+    
