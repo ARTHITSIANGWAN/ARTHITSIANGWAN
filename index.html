@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TNH-AI V2 — Digital Partner Control Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Prompt:wght@300;400;600&display=swap');
+    body { font-family: 'Prompt', sans-serif; }
+    .code-font { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col">
+
+  <!-- 1. TOP NAVIGATION BAR (SYSTEM IDENTITY & BOUNDARY) -->
+  <header class="bg-slate-900 border-b border-slate-800 px-6 py-3 flex items-center justify-between">
+    <div class="flex items-center space-x-4">
+      <div class="bg-blue-600 text-white p-2 rounded-lg font-bold flex items-center justify-center w-10 h-10">
+        TNH
+      </div>
+      <div>
+        <h1 class="font-semibold text-lg leading-tight flex items-center gap-2">
+          TNH-AI Full Stack V2
+          <span class="text-xs font-mono bg-blue-950 text-blue-400 border border-blue-800 px-2 py-0.5 rounded">v2.0-SOVEREIGN</span>
+        </h1>
+        <p class="text-xs text-slate-400 font-mono">127.0.0.1:8010 | Port 2026 Engine</p>
+      </div>
+    </div>
+
+    <!-- Live System Metrics -->
+    <div class="hidden md:flex items-center space-x-6 text-xs font-mono">
+      <div class="flex items-center space-x-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span class="text-slate-400">Status:</span>
+        <span class="text-emerald-400 font-bold">OPERATIONAL</span>
+      </div>
+      <div class="border-r border-slate-800 h-6"></div>
+      <div>
+        <span class="text-slate-400">Latency:</span>
+        <span class="text-blue-400 font-bold">0.18 ms</span>
+      </div>
+      <div class="border-r border-slate-800 h-6"></div>
+      <div>
+        <span class="text-slate-400">Collision Rate:</span>
+        <span class="text-emerald-400 font-bold">0.00%</span>
+      </div>
+    </div>
+
+    <!-- Identity Pill -->
+    <div class="flex items-center space-x-3 bg-slate-950 px-3 py-1.5 rounded-full border border-slate-800">
+      <i class="fa-solid font-mono text-xs text-blue-400">HUMAN_ID</i>
+      <span class="text-xs text-slate-300 font-mono">Founder (ARTHIT)</span>
+      <span class="bg-emerald-950 text-emerald-400 text-[10px] px-2 py-0.5 rounded-full border border-emerald-800">Commander</span>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT GRID -->
+  <main class="flex-1 p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+    <!-- LEFT COLUMN: INTENT INPUT & AUTHORITY CONTROL (3 COLS) -->
+    <section class="lg:col-span-3 space-y-6">
+      
+      <!-- INTENT TRIGGER PANEL -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg">
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="text-sm font-semibold flex items-center gap-2 text-blue-400">
+            <i class="fa-solid fa-bullseye"></i> Sovereign Intent Input
+          </h2>
+          <span class="text-[10px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono">Outcome-Driven</span>
+        </div>
+        <form onsubmit="event.preventDefault();" class="space-y-3">
+          <div>
+            <label class="text-xs text-slate-400 block mb-1">Target Outcome (Intent)</label>
+            <textarea class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 resize-none font-mono" rows="3" placeholder="เช่น 'ผลิตและส่งออกคลิปสั้นลง TikTok และ YouTube Reels ประจำวันนี้'"></textarea>
+          </div>
+          <button class="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-2 rounded-lg text-xs transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-play"></i> Delegate to AI Partner
+          </button>
+        </form>
+      </div>
+
+      <!-- AUTHORITY LAYER STATUS -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg space-y-3">
+        <h2 class="text-sm font-semibold flex items-center gap-2 text-purple-400">
+          <i class="fa-solid fa-shield-halved"></i> Authority Matrix
+        </h2>
+        <div class="space-y-2 text-xs font-mono">
+          <div class="flex justify-between items-center bg-slate-950 p-2 rounded border border-slate-800">
+            <span class="text-slate-300">search / analyze</span>
+            <span class="text-emerald-400 font-bold bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-900">ALLOWED</span>
+          </div>
+          <div class="flex justify-between items-center bg-slate-950 p-2 rounded border border-slate-800">
+            <span class="text-slate-300">execute / render</span>
+            <span class="text-emerald-400 font-bold bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-900">ALLOWED</span>
+          </div>
+          <div class="flex justify-between items-center bg-slate-950 p-2 rounded border border-slate-800">
+            <span class="text-slate-300">publish_platform</span>
+            <span class="text-emerald-400 font-bold bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-900">ALLOWED</span>
+          </div>
+          <div class="flex justify-between items-center bg-slate-950 p-2 rounded border border-slate-800">
+            <span class="text-slate-300">delete_data</span>
+            <span class="text-rose-400 font-bold bg-rose-950/60 px-1.5 py-0.5 rounded border border-rose-900">RESTRICTED</span>
+          </div>
+          <div class="flex justify-between items-center bg-slate-950 p-2 rounded border border-slate-800">
+            <span class="text-slate-300">security_change</span>
+            <span class="text-amber-400 font-bold bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-900">APPROVAL_REQ</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- AGENT MATRIX REGISTRY -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg space-y-3">
+        <h2 class="text-sm font-semibold flex items-center gap-2 text-emerald-400">
+          <i class="fa-solid fa-network-wired"></i> Agent Matrix (L1–L11)
+        </h2>
+        <div class="grid grid-cols-2 gap-2 text-xs font-mono">
+          <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center">
+            <div class="text-blue-400 font-bold">L1 Commander</div>
+            <div class="text-[10px] text-slate-500">Orchestrator</div>
+          </div>
+          <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center">
+            <div class="text-emerald-400 font-bold">L3 Frontline</div>
+            <div class="text-[10px] text-slate-500">Artist / Nam-Ing</div>
+          </div>
+          <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center">
+            <div class="text-purple-400 font-bold">L4 Analyst</div>
+            <div class="text-[10px] text-slate-500">Mobile Lab</div>
+          </div>
+          <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center">
+            <div class="text-amber-400 font-bold">L9 Sentinel</div>
+            <div class="text-[10px] text-slate-500">Security Gate</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- MIDDLE COLUMN: LIVE JOB GRAPH ENGINE (6 COLS) -->
+    <section class="lg:col-span-6 space-y-6">
+
+      <!-- ACTIVE JOB GRAPH MONITOR -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-lg flex flex-col h-full min-h-[500px]">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div>
+            <span class="text-xs font-mono text-slate-500">CURRENT ACTIVE JOB</span>
+            <h2 class="text-base font-bold font-mono text-blue-400 flex items-center gap-2">
+              JOB-2026-0921-01 <span class="text-xs font-normal text-emerald-400 bg-emerald-950 px-2 py-0.5 rounded border border-emerald-800">IN_PROGRESS</span>
+            </h2>
+          </div>
+          <div class="text-right font-mono">
+            <div class="text-xs text-slate-400">Delegate: <span class="text-slate-200">AI_PARTNER</span></div>
+            <div class="text-xs text-slate-400">Trace ID: <span class="text-blue-400">TR-88192</span></div>
+          </div>
+        </div>
+
+        <!-- JOB GRAPH STEPS -->
+        <div class="flex-1 py-6 space-y-4">
+          <p class="text-xs text-slate-400 font-mono mb-2">// Job Graph Execution Timeline</p>
+          
+          <!-- Step 1: Resolved -->
+          <div class="flex items-start space-x-3 bg-slate-950 p-3 rounded-lg border border-emerald-900/50">
+            <div class="mt-0.5 text-emerald-400"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="flex-1 font-mono text-xs">
+              <div class="flex justify-between font-semibold text-slate-200">
+                <span>1. Resolve Intent & Assets</span>
+                <span class="text-emerald-400">SUCCESS (0.12ms)</span>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">Executor: L3 Artist | Master Asset ID: AST-9901</p>
+            </div>
+          </div>
+
+          <!-- Step 2: In Progress -->
+          <div class="flex items-start space-x-3 bg-slate-950 p-3 rounded-lg border border-blue-800">
+            <div class="mt-0.5 text-blue-400 animate-spin"><i class="fa-solid fa-spinner"></i></div>
+            <div class="flex-1 font-mono text-xs">
+              <div class="flex justify-between font-semibold text-slate-200">
+                <span>2. Signature Engine Render</span>
+                <span class="text-blue-400">RUNNING...</span>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">Executor: L4 Analyst | Applying Watermark, Audio & Multi-Format (9:16, 16:9)</p>
+            </div>
+          </div>
+
+          <!-- Step 3: Pending -->
+          <div class="flex items-start space-x-3 bg-slate-950/40 p-3 rounded-lg border border-slate-800 opacity-60">
+            <div class="mt-0.5 text-slate-500"><i class="fa-regular fa-circle"></i></div>
+            <div class="flex-1 font-mono text-xs">
+              <div class="flex justify-between font-semibold text-slate-400">
+                <span>3. Platform Gateway Upload</span>
+                <span class="text-slate-500">PENDING</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-1">Target: YouTube Adapter, TikTok Adapter | Credential Service Isolated</p>
+            </div>
+          </div>
+
+          <!-- Step 4: Verification -->
+          <div class="flex items-start space-x-3 bg-slate-950/40 p-3 rounded-lg border border-slate-800 opacity-60">
+            <div class="mt-0.5 text-slate-500"><i class="fa-regular fa-circle"></i></div>
+            <div class="flex-1 font-mono text-xs">
+              <div class="flex justify-between font-semibold text-slate-400">
+                <span>4. Definition of Done Verification</span>
+                <span class="text-slate-500">PENDING</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-1">Checks: render_verified, upload_verified, publication_confirmed</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DEFINITION OF DONE CHECKLIST -->
+        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 mt-auto font-mono text-xs space-y-2">
+          <div class="text-slate-400 font-bold mb-1">Definition of Done (DoD) Criteria:</div>
+          <div class="grid grid-cols-2 gap-2 text-[11px]">
+            <span class="text-emerald-400"><i class="fa-solid fa-check"></i> master_rendered</span>
+            <span class="text-emerald-400"><i class="fa-solid fa-check"></i> signature_verified</span>
+            <span class="text-amber-400"><i class="fa-solid fa-hourglass-half"></i> platform_upload_verified</span>
+            <span class="text-slate-500"><i class="fa-regular fa-circle"></i> publication_confirmed</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- RIGHT COLUMN: OBSERVABILITY & PLATFORM ADAPTERS (3 COLS) -->
+    <section class="lg:col-span-3 space-y-6">
+
+      <!-- PLATFORM ADAPTER GATEWAY -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg space-y-3">
+        <h2 class="text-sm font-semibold flex items-center gap-2 text-blue-400">
+          <i class="fa-solid fa-plug"></i> Platform Gateway
+        </h2>
+        <div class="space-y-2 text-xs font-mono">
+          <div class="flex items-center justify-between bg-slate-950 p-2.5 rounded border border-slate-800">
+            <div class="flex items-center space-x-2">
+              <i class="fa-brands fa-youtube text-red-500"></i>
+              <span class="text-slate-300">YouTube</span>
+            </div>
+            <span class="text-xs text-emerald-400">Ready</span>
+          </div>
+          <div class="flex items-center justify-between bg-slate-950 p-2.5 rounded border border-slate-800">
+            <div class="flex items-center space-x-2">
+              <i class="fa-brands fa-tiktok text-cyan-400"></i>
+              <span class="text-slate-300">TikTok</span>
+            </div>
+            <span class="text-xs text-emerald-400">Ready</span>
+          </div>
+          <div class="flex items-center justify-between bg-slate-950 p-2.5 rounded border border-slate-800">
+            <div class="flex items-center space-x-2">
+              <i class="fa-brands fa-meta text-blue-500"></i>
+              <span class="text-slate-300">Meta / IG</span>
+            </div>
+            <span class="text-xs text-emerald-400">Ready</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- OBSERVABILITY LOGS (TRACEABLE) -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg space-y-3">
+        <div class="flex items-center justify-between">
+          <h2 class="text-sm font-semibold flex items-center gap-2 text-amber-400">
+            <i class="fa-solid fa-terminal"></i> Audit Trace Log
+          </h2>
+          <span class="text-[10px] text-slate-500 font-mono">Zero-Garbage</span>
+        </div>
+        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 font-mono text-[10px] text-slate-400 space-y-2 h-[260px] overflow-y-auto">
+          <div><span class="text-blue-400">[15:01:02]</span> <span class="text-slate-200">HUMAN</span> -> Intent: "Render Daily Clips"</div>
+          <div><span class="text-blue-400">[15:01:03]</span> <span class="text-purple-400">AI_PARTNER</span> -> Auth Granted (Policy: CONTENT-PUBLISH-V1)</div>
+          <div><span class="text-blue-400">[15:01:03]</span> <span class="text-emerald-400">JOB_ENGINE</span> -> Created JOB-2026-0921-01</div>
+          <div><span class="text-blue-400">[15:01:04]</span> <span class="text-amber-400">L3_ARTIST</span> -> Master Asset AST-9901 Loaded</div>
+          <div><span class="text-blue-400">[15:01:05]</span> <span class="text-amber-400">L4_ANALYST</span> -> Signature Engine Watermark Injected</div>
+          <div class="text-slate-500">// Trace ID TR-88192 active...</div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER STATUS -->
+  <footer class="bg-slate-900 border-t border-slate-800 px-6 py-2 text-xs font-mono text-slate-500 flex justify-between items-center">
+    <div>TNH-AI Sovereign Engine © 2026 | Pure Go Backend</div>
+    <div>SQLite WAL Mode | Ingress Single Stream Mode</div>
+  </footer>
+
+</body>
+</html>
+
+          
