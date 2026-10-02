@@ -6,10 +6,10 @@
 ---
 
 ## 👤 1. SOVEREIGN IDENTITY BOUNDARY (บุคคล x องค์กร)
-* **Founder / Owner (Personal):** `Arthit Siangwan` (`ARTHITSIANGWAN`)
+* **Founder / Owner (Personal):** `ThitNueaHub Admin` (`ARTHITSIANGWAN`)
   * **Role:** Sovereign Developer & System Architect
   * **Core Focus:** Pure Go Architecture, Low-Latency Edge Computing, Termux Mobile Infrastructure
-* **Organization Entity:** `ThitNueaHub` (`@ThitNueaHub`)
+* **Organization Entity:** `ThitNueaHub Admin` (`@ThitNueaHub`)
   * **Mission:** Mobile-First AI Lab for SMEs & Local Economy (100% Low-Cost Infrastructure)
   * **Brand Tagging Format:** `TNH-AI-THITNUEAHUB` (`tnh_ai`)
 
