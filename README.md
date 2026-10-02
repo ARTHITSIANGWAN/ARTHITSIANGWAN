@@ -1,7 +1,7 @@
 # 🏛️ TNH MATRIX V83 - MASTER IDENTITY & SYSTEM MANIFEST
 > **Status:** SOVEREIGN OPERATIONAL (Audit-Ready)
 > **Primary Bus:** Pure Go Control Engine (`127.0.0.1:8010` / `Port 2026`)
-> **Data Collision Rate:** 0.00% | **Execution Latency:** 0.16 ms - 0.32 ms
+> **Data Collision Rate:** 0.00% | **Execution Latency:** 0.xx ms - 0.xx ms
 
 ---
 
@@ -56,7 +56,7 @@ graph TD
 
     %% Network Analytics Core Branch
     subgraph Network_Analytics_Core ["แกนวิเคราะห์เครือข่าย L4"]
-    NetworkAnalyticsCore(L4 ไพรทอง - แกนวิเคราะห์เครือข่าย GitHub):::tnh_core;
+    NetworkAnalyticsCore(L4 พรายทอง - แกนวิเคราะห์เครือข่าย GitHub):::tnh_core;
     AuditResult["ผลการตรวจสอบ"]:::tnh_data;
 
     NetworkAnalyticsCore --> AuditResult;
