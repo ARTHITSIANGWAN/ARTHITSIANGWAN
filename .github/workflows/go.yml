@@ -1,0 +1,35 @@
+name: TNH-AI Go Build & Test Pipeline
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    name: Build & Validate Pure Go Engine
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Step 1: Checkout โค้ดจาก Repository
+        uses: actions/checkout@v4
+
+      - name: Step 2: ตั้งค่า Go Environment (Setup Go v1.22)
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: 'go.mod'
+          cache: true
+
+      - name: Step 3: ตรวจสอบ Dependencies
+        run: go mod download
+
+      - name: Step 4: ตรวจสอบความถูกต้องของโค้ด (Lint & Build Path)
+        run: |
+          echo "Compiling Pure Go Agent Gateway..."
+          go build -v ./...
+
+      - name: Step 5: รัน Unit Tests
+        run: |
+          go test -v ./...
+          
