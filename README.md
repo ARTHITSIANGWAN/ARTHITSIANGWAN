@@ -1,107 +1,71 @@
-# 🏛️ TNH MATRIX V83 - MASTER IDENTITY & SYSTEM MANIFEST
 > **Status:** SOVEREIGN OPERATIONAL (Audit-Ready)
 > **Primary Bus:** Pure Go Control Engine (`127.0.0.1:8010` / `Port 2026`)
 > **Data Collision Rate:** 0.00% | **Execution Latency:** 0.xx ms - 0.xx ms
 
----
-
-## 👤 1. SOVEREIGN IDENTITY BOUNDARY (บุคคล x องค์กร)
-* **Founder / Owner (Personal):** `ThitNueaHub` (`ARTHITSIANGWAN`)
-  * **Role:** Sovereign Developer & System Architect
-  * **Core Focus:** Pure Go Architecture, Low-Latency Edge Computing, Termux Mobile Infrastructure
-* **Organization Entity:** `ThitNueaHub` (`@ThitNueaHub`)
-  * **Mission:** Mobile-First AI Lab for SMEs & Local Economy (100% Low-Cost Infrastructure)
-  * **Brand Tagging Format:** `TNH-AI-THITNUEAHUB` (`tnh_ai`)
-
----
-
-## ⚡ 2. PORT 2026 TO V83 TRINITY EMPIRE ROUTING MAP
-
-
-### 🔐 Private Access & Authentication Protocol
-- **Target Repository:** `ARTHITSIANGWAN/TNH-AI-V83-TRINITY-EMPIRE` (Private)
-- **Routing Strategy:** ให้ Port 2026 ดึง Context จาก V83 ผ่าน **Local File System (`./`)** หรือ **GitHub Personal Access Token (PAT)** ที่มีสิทธิ์ `repo` โดยตรง
-- **Security Validation:** HMAC-SHA256 Payload Signature Validation
-- **Identity Defense:** Blue-Eye Protocol (Sapphire Iris Visual Marker)
-
----
-
-## 🛡️ 3. CUT-OFF CLOUD LISTENER AUDIT STATUS
-- **Google Cloud Functions / Firestore Listener:** `DISABLED / CUT-OFF` ⛔
-- **Ingress Mode:** Single Stream Pure Go Engine Only 🟢
-- **Collision Reduction:** ลดลงจาก 12.00% สู่ **0.00%** สำเร็จเด็ดขาด
-
-
 ```mermaid
 graph TD
-    %% Define Node Styles
-    classDef tnh_core fill:#cce5ff,stroke:#004085,stroke-width:2px,rx:10,ry:10,color:black,font-weight:bold;
-    classDef tnh_data fill:#d4edda,stroke:#155724,stroke-width:2px,rx:10,ry:10,color:black,font-weight:bold;
-    classDef tnh_network fill:#fff3cd,stroke:#856404,stroke-width:2px,rx:10,ry:10,color:black,font-weight:bold;
-    classDef tnh_directive fill:#f8d7da,stroke:#721c24,stroke-width:2px,rx:10,ry:10,color:black,font-weight:bold;
+%% Define Node Styles
+classDef tnh_core fill:#cce5ff,stroke:#004085,stroke-width:2px,rx:10,ry:10,color:black,font-weight:bold;
+classDef tnh_data fill:#d4edda,stroke:#155724,stroke-width:2px,rx:10,ry:10,color:black,font-weight:bold;
+classDef tnh_network fill:#fff3cd,stroke:#856404,stroke-width:2px,rx:10,ry:10,color:black,font-weight:bold;
+classDef tnh_directive fill:#f8d7da,stroke:#721c24,stroke-width:2px,rx:10,ry:10,color:black,font-weight:bold;
 
-    %% Data Flow Root
-    Root[TNH System Flow v8.3]:::tnh_core --> Directive;
+%% Data Flow Root
+Root[TNH System Flow v8.3]:::tnh_core --> Directive;
 
-    %% Directive Processing Branch
-    subgraph Directive_Processing ["คำสั่งประมวลผล"]
+%% Directive Processing Branch
+subgraph Directive_Processing ["คำสั่งประมวลผล"]
     Directive(TNH_Master_Directive_PhraiThong_NamIng_V83):::tnh_directive;
     ParsedDirective["สถานะ: สำเร็จ / ผ่านการตีความ"]:::tnh_data;
     StoredDirective["สถานะ: จัดเก็บแล้ว"]:::tnh_data;
-
     Directive --> ParsedDirective;
     ParsedDirective --> StoredDirective;
     StoredDirective --> NetworkAnalyticsCore;
-    end
+end
 
-    %% Network Analytics Core Branch
-    subgraph Network_Analytics_Core ["แกนวิเคราะห์เครือข่าย L4"]
+%% Network Analytics Core Branch
+subgraph Network_Analytics_Core ["แกนวิเคราะห์เครือข่าย L4"]
     NetworkAnalyticsCore(L4 พรายทอง - แกนวิเคราะห์เครือข่าย GitHub):::tnh_core;
     AuditResult["ผลการตรวจสอบ"]:::tnh_data;
-
     NetworkAnalyticsCore --> AuditResult;
 
-        %% Audit Result Breakdown
-        subgraph Audit_Breakdown ["รายละเอียดการตรวจสอบ"]
+    %% Audit Result Breakdown
+    subgraph Audit_Breakdown ["รายละเอียดการตรวจสอบ"]
         Account["บัญชี: ผู้ดูแลระบบ ARTHITSIANGWAN"]:::tnh_core;
         ActiveRepos["คลังข้อมูลที่เปิดใช้งาน: 23"]:::tnh_core;
         NetworkConnections["การเชื่อมต่อเครือข่าย: ติดตาม 27 บัญชี"]:::tnh_network;
         CoreTech["เน้นเทคโนโลยีหลัก: Pure Go, Zero-Garbage AI"]:::tnh_core;
         AccuracyTarget["เป้าหมายความแม่นยำของระบบ: 98.50%"]:::tnh_core;
         LoopingRate["อัตราการทำงานซ้ำ: 0.00% ถูกกำจัด"]:::tnh_core;
-
+        
         AuditResult --> Account;
         AuditResult --> ActiveRepos;
         AuditResult --> NetworkConnections;
         AuditResult --> CoreTech;
         AuditResult --> AccuracyTarget;
         AuditResult --> LoopingRate;
-        end
+    end
 
-    NetworkConnections --> ConnectionsGeographic;
-
-        %% Network Geography Breakdown
-        subgraph Geo_Scope ["ขอบเขตภูมิศาสตร์"]
+    %% Network Geography Breakdown
+    subgraph Geo_Scope ["ขอบเขตภูมิศาสตร์"]
         ConnectionsGeographic["ขอบเขตภูมิศาสตร์การเชื่อมต่อ"]:::tnh_network;
         Europe(ยุโรป);
         MiddleEast(ตะวันออกกลาง);
         Asia(เอเชีย);
         Americas(อเมริกา);
-
         ConnectionsGeographic --> Europe;
         ConnectionsGeographic --> MiddleEast;
         ConnectionsGeographic --> Asia;
         ConnectionsGeographic --> Americas;
-        end
     end
+end
 
-    %% Storage Archival Branch
-    subgraph Storage_Archival ["การเก็บถาวรข้อมูล"]
+%% Storage Archival Branch
+subgraph Storage_Archival ["การเก็บถาวรข้อมูล"]
     ArchivedTo["เก็บถาวรที่"]:::tnh_data;
     R2Storage["ระบบเก็บข้อมูล R2"]:::tnh_data;
     Verified["ยืนยันแล้ว 100%"]:::tnh_data;
-
     AuditResult --> ArchivedTo;
     ArchivedTo --> R2Storage;
     R2Storage --> Verified;
-    end
+end
